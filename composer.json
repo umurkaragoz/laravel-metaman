@@ -17,7 +17,7 @@
                 "Umurkaragoz\\Metaman\\MetamanServiceProvider"
             ],
             "aliases": {
-                "Bar": "Umurkaragoz\\Metaman\\Metaman"
+                "Metaman": "Umurkaragoz\\Metaman\\Metaman"
             }
         }
     },
