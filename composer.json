@@ -1,0 +1,30 @@
+{
+    "name": "umurkaragoz/laravel-metaman",
+    "description": "Meta manager for laravel projects.",
+    "type": "library",
+    "require": {
+        "php": ">=7.0"
+    },
+    "authors": [
+        {
+            "name": "Umur Karagöz",
+            "email": "lazysheepherd@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Umurkaragoz\\Metaman\\MetamanServiceProvider"
+            ],
+            "aliases": {
+                "Bar": "Umurkaragoz\\Metaman\\Metaman"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Umurkaragoz\\Metaman\\": "src/"
+        }
+    }
+}
