@@ -1,7 +1,7 @@
 <?php
 namespace Umurkaragoz\Metaman;
 
-use Metaman;
+use Umurkaragoz\Metaman;
 use Input;
 
 trait FeedsMeta
