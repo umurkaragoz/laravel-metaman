@@ -1,14 +1,14 @@
 <?php
 namespace Umurkaragoz\Metaman;
 
-use Umurkaragoz\Metaman;
+use Metaman;
 use Input;
 
 trait FeedsMeta
 {
 
     /* ------------------------------------------------------------------------------------------------------------------------------ LISTENERS -+- */
-    public static function bootMetaTrait()
+    public static function bootFeedsMeta()
     {
         self::saving(function ($_this) {
             if ($_this->exists && $_this->metaAutoUpdate !== false) {
@@ -25,7 +25,7 @@ trait FeedsMeta
     /* ------------------------------------------------------------------------------------------------------------------------------ RELATIONS -+- */
     public function meta()
     {
-        return $this->morphMany('App\Models\Meta', 'content');
+        return $this->morphMany('Umurkaragoz\Metaman\Meta', 'content');
     }
 
     /* -------------------------------------------------------------------------------------------------------------------------------- HELPERS -+- */
@@ -116,7 +116,7 @@ trait FeedsMeta
     {
         $meta = is_array($input) ? array_merge($this->getMeta(), $input) : $this->getMeta();
 
-        MetaRenderer::feed(array_merge($this->metaDefaults(), $meta));
+        Metaman::feed(array_merge($this->metaDefaults(), $meta));
 
         return $this;
     }
