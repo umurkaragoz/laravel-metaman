@@ -25,7 +25,7 @@ trait FeedsMeta
     /* ------------------------------------------------------------------------------------------------------------------------------ RELATIONS -+- */
     public function meta()
     {
-        return $this->morphMany('App\Models\Meta', 'content');
+        return $this->morphMany('Umurkaragoz\Metaman\Meta', 'content');
     }
 
     /* -------------------------------------------------------------------------------------------------------------------------------- HELPERS -+- */
@@ -116,7 +116,7 @@ trait FeedsMeta
     {
         $meta = is_array($input) ? array_merge($this->getMeta(), $input) : $this->getMeta();
 
-        MetaRenderer::feed(array_merge($this->metaDefaults(), $meta));
+        Metaman::feed(array_merge($this->metaDefaults(), $meta));
 
         return $this;
     }

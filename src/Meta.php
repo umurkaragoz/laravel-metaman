@@ -1,5 +1,5 @@
 <?php
-namespace App\Models;
+namespace Umurkaragoz\Metaman;
 
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Model;
