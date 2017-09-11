@@ -1,7 +1,6 @@
 <?php
 namespace Umurkaragoz\Metaman;
 
-use Metaman;
 use Input;
 
 trait FeedsMeta
@@ -127,9 +126,14 @@ trait FeedsMeta
      * This function must return an array. Array should have meta names and contents as keys and values
      *
      * example: [
-     *      'description' => $this->some_field
-     *      'keywords'    => someFunction()
-     *      'author'      => 'some value'
+     *      'title'          => $this->title,
+     *      'description'    => $this->description,
+     *      'author'         => 'some sexy name',
+     *      'og:title'       => ':title',
+     *      'og:description' => ':description',
+     *      'og:url'         => $this->url,
+     *      'og:type'        => 'article',
+     *      'og:image'       => $this->photoUrl,
      * ]
      *
      * @return array
