@@ -1,4 +1,5 @@
 <?php
+
 namespace Umurkaragoz\Metaman;
 
 use Input;
@@ -7,7 +8,7 @@ trait FeedsMeta
 {
 
     /* ------------------------------------------------------------------------------------------------------------------------------ LISTENERS -+- */
-    public static function bootMetaTrait()
+    public static function bootFeedsMeta()
     {
         self::saving(function ($_this) {
             if ($_this->exists && $_this->metaAutoUpdate !== false) {
@@ -87,8 +88,9 @@ trait FeedsMeta
     /**
      * Returns meta data associated with this item
      *
-     * @param null $name meta name requested. An array contains all meta name-content pairs will be returned if this left null.
+     * @param null $name    meta name requested. An array contains all meta name-content pairs will be returned if this left null.
      * @param null $default optional default value to be returned if no entry for requested meta name found.
+     *
      * @return string|array
      */
     public function getMeta($name = null, $default = null)
@@ -109,6 +111,7 @@ trait FeedsMeta
      * Feed the Meta Renderer with this model's meta. Optionally extend model's meta with input.
      *
      * @param null|array $input will extend/overwrite model's meta keys if provided.
+     *
      * @return $this
      */
     public function feedMeta($input = null)
