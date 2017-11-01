@@ -5,17 +5,17 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Models\Meta
+ * Umurkaragoz\Metaman\Meta
  *
  * @property string $content_type
  * @property int $content_id
  * @property string $meta_name
  * @property string $meta_content
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $content
- * @method static \Illuminate\Database\Query\Builder|\App\Models\Meta whereContentId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Models\Meta whereContentType($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Models\Meta whereMetaContent($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Models\Meta whereMetaName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Umurkaragoz\Metaman\Meta whereContentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Umurkaragoz\Metaman\Meta whereContentType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Umurkaragoz\Metaman\Meta whereMetaContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Umurkaragoz\Metaman\Meta whereMetaName($value)
  * @mixin \Eloquent
  */
 class Meta extends Model
